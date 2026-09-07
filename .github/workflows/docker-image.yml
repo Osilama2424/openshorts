@@ -27,6 +27,6 @@ jobs:
         context: .
         push: true
         tags: |
-          osilama2k24/openshorts-full-app-:latest
+          osilama2k24/openshorts-full-app:latest
           osilama2k24/openshorts-full-app:${{ github.sha }}
           
