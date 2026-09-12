@@ -3,9 +3,11 @@ import react from '@vitejs/plugin-react'
 import seo from './vite-plugin-seo'
 
 // Backend target for the dev proxy. Defaults to the docker-compose service
-// name; set VITE_PROXY_TARGET=http://localhost:8000 to run the dev server on
-// the host against a backend reachable at localhost (no CORS, same-origin).
-const backend = process.env.VITE_PROXY_TARGET || 'http://localhost:8000'
+// name (this container is `frontend`, the backend is reachable at
+// `backend:8000` on the compose network); set VITE_PROXY_TARGET=http://localhost:8000
+// to run the dev server on the host against a backend reachable at localhost
+// instead (no Docker, same-origin).
+const backend = process.env.VITE_PROXY_TARGET || 'http://backend:8000'
 const renderer = process.env.VITE_RENDER_TARGET || 'http://renderer:3100'
 
 // https://vitejs.dev/config/
