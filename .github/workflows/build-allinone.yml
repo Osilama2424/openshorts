@@ -46,3 +46,9 @@ jobs:
           tags: |
             osilama2k24/openshorts-allinone:latest
             osilama2k24/openshorts-allinone:${{ github.sha }}
+          context: .
+          file: ./Dockerfile.allinone
+          push: true
+          tags: |
+            osilama2k24/openshorts-allinone:latest
+            osilama2k24/openshorts-allinone:${{ github.sha }}
