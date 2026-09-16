@@ -29,11 +29,17 @@ jobs:
         uses: docker/setup-buildx-action@v3
         with:
           driver: cloud
-          endpoint: "osilama2k24/osilama"
+          endpoint: "stvn24/Steven"
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .
+          file: ./Dockerfile.allinone
+          push: true
+          tags: |
+            osilama2k24/openshorts-allinone:latest
+            osilama2k24/openshorts-allinone:${{ github.sha }}
           context: .
           file: ./Dockerfile.allinone
           push: true
