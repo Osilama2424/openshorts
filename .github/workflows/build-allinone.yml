@@ -38,5 +38,5 @@ jobs:
           file: ./Dockerfile.allinone
           push: true
           tags: |
-            osilama2k24/openshorts-allinone:latest
-            osilama2k24/openshorts-allinone:${{ github.sha }}
+            stvn24/openshorts-allinone:latest
+            stvn24/openshorts-allinone:${{ github.sha }}
